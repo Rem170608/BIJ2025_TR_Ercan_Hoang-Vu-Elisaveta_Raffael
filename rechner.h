@@ -82,4 +82,4 @@ static inline void fakultaet(int *numbers, int n) {
     }
 }
 
-#endif
+#endif<
