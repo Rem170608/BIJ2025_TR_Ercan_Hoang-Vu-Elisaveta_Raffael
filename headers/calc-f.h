@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-void add(double a, double b) {
+void add(int a, int b) {
     printf("Result: %.2f\n", a + b);
 }
 
 void subtract(int a, int b) {
-    printf("Result: %d\n", a - b);
+    printf("Result: %.2f\n", a - b);
 }
 
 void multiply(int a, int b) {
-    printf("Result: %d\n", a * b);
+    printf("Result: %.2f\n", a * b);
 }
 
 void divide(int a, int b) {
