@@ -1,3 +1,1 @@
 Calculator
-
-By fjsdjfpüs
