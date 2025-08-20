@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "./rechner.h"
 
+
 #define MAX 1000
 
 int main() {
@@ -8,7 +9,7 @@ int main() {
     int count = 0;
     char op;
 
-    printf("Willkommen beim erweiterten Rechner!\n");
+    printf("Willkommen beim Ganzzahlen-Rechner!\n");
     printf("Welche Operation moechten Sie ausfuehren?\n");
     printf(" + Addition\n");
     printf(" - Subtraktion\n");
@@ -33,7 +34,7 @@ int main() {
         return 0;
     }
 
-    double result = 0;
+    int result = 0;
     switch (op) {
         case '+': result = add(numbers, count); break;
         case '-': result = sub(numbers, count); break;
@@ -47,6 +48,6 @@ int main() {
             return 0;
     }
 
-    printf("Ergebnis: %.2f\n", result);
+    printf("Ergebnis: %d\n", result);
     return 0;
 }
