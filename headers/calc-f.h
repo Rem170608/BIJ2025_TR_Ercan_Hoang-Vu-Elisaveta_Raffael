@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void add(int a, int b) {
-    printf("Result: %d\n", a + b);
+void add(double a, double b) {
+    printf("Result: %.2f\n", a + b);
 }
 
 void subtract(int a, int b) {

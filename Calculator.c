@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "./heraders/calc-f.h"
+#include "./headers/calc-f.h"
 
 int main() {
     int a, b;
