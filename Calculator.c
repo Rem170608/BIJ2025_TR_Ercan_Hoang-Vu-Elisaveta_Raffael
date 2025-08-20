@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "./headers/calc-f.h"
+#include "geom.h"
 
 int main() {
     int a, b;
