@@ -2,39 +2,53 @@
 // Created by bulga on 21.08.2025.
 //
 
-#ifndef bmi_H
-#define bmi_H
+#ifndef BMI_H
+#define BMI_H
 
 #include <stdio.h>
 
-// BMI berechnen (Gewicht in kg, Größe in cm)
-static inline int bmi_berechnen(int gewicht, int groesse_cm) {
-    int groesse_m = groesse_cm;
-    // wir rechnen in cm, also groesse_m^2 in (cm^2)
-    // BMI-Formel: gewicht / (größe_in_m^2)
-    // Da wir cm haben: groesse_cm^2 / 10000, darum:
-    int bmi = (gewicht * 10000) / (groesse_cm * groesse_cm);
-    return bmi;
+// BMI berechnen
+static inline double bmirechnen(double gewicht, double groesse) {
+    if (groesse <= 0) return 0.0; // Schutz gegen Division durch 0
+    return gewicht / (groesse * groesse);
 }
 
-// BMI-Kategorie bestimmen
-static inline void bmi_kategorie(int bmi) {
-    if (bmi < 18) {
-        printf("Untergewicht\n");
-    } else if (bmi < 25) {
-        printf("Normalgewicht\n");
-    } else if (bmi < 30) {
-        printf("Übergewicht\n");
-    } else {
-        printf("Adipositas\n");
-    }
+// Gewicht abfragen
+static inline double frageGewicht() {
+    double gewicht;
+    printf("Gib dein Gewicht in kg ein: ");
+    scanf("%lf", &gewicht);
+    return gewicht;
 }
 
-// Menü anzeigen
-static inline void life_menue() {
-    printf("\n--- Life Science ---\n");
-    printf("BMI Rechner\n");
-    printf("Bitte Gewicht (kg) und Grosse (cm) eingeben.\n");
+// Groesse abfragen
+static inline double frageGroesse() {
+    double groesse;
+    printf("Gib deine Groesse in Metern ein (z.B. 1.80): ");
+    scanf("%lf", &groesse);
+    return groesse;
+}
+
+// Auswertung anzeigen
+static inline void auswertung(double bmi) {
+    printf("Dein BMI ist: %.2lf\n", bmi);
+
+    if (bmi < 18.5)
+        printf("=> Untergewicht\n");
+    else if (bmi < 25)
+        printf("=> Normalgewicht\n");
+    else if (bmi < 30)
+        printf("=> Uebergewicht\n");
+    else
+        printf("=> Adipositas\n");
+}
+
+// Ganze BMI-Runde
+static inline void bmiRunde() {
+    double gewicht = frageGewicht();
+    double groesse = frageGroesse();
+    double result = bmirechnen(gewicht, groesse);
+    auswertung(result);
 }
 
 #endif

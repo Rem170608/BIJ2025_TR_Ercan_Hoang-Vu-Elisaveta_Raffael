@@ -5,27 +5,26 @@
 
 int main() {
     char nochmal;
-    int gewicht, groesse, bmi;
 
     do {
-        life_menue();
+            printf("               (           )    *                    )           *    (      (                )    )     (     \n");
+            printf(" (  (         )\\ )  (  ( /(  (  `          *   ) ( /(      (  (  `   )\\ )   )\\ )      (   ( /( ( /(     )\\ )  \n");
+            printf(" )\\))(   '(  (()/(  )\\ )\\()) )\\))(  (    ` )  /( )\\())   ( )\\ )\\))( (()/(  (()/((     )\\  )\\()))\\())(  (()/(  \n");
+            printf("((_)()\\ ) )\\  /(_)|((_|(_)\\ ((_)()\\ )\\    ( )(_)|(_)\\    )((_|(_)()\\ /(_))  /(_))\\  (((_)((_)\\((_)\ )\\  /(_)) \n");
+            printf("_(())\\_)(|(_)(_)) )\\___ ((_)(_()((_|(_)  (_(_())  ((_)  ((_)_(_()((_|_))   (_))((_) )\\___ _((_)_((_|(_)(_))   \n");
+            printf("\\ \\((_)/ / __| | ((/ __/ _ \\|  \\/  | __| |_   _| / _ \\   | _ )  \\/  |_ _|  | _ \\ __((/ __| || | \\| | __| _ \\  \n");
+            printf(" \\ \\/\\/ /| _|| |__| (_| (_) | |\\/| | _|    | |  | (_) |  | _ \\ |\\/| || |   |   / _| | (__| __ | .` | _||   /  \n");
+            printf("  \\_/\\_/ |___|____|\\___\\___/|_|  |_|___|   |_|   \\___/   |___/_|  |_|___|  |_|_\\___| \\___|_||_|_|\\_|___|_|_\\  \n");
 
-        printf("Gewicht (kg): ");
-        scanf("%d", &gewicht);
+        printf("\n===== BMI-RECHNER APP =====\n");
+        bmiRunde();
 
-        printf("Grosse (cm): ");
-        scanf("%d", &groesse);
-
-        bmi = bmi_berechnen(gewicht, groesse);
-
-        printf("Dein BMI ist: %d\n", bmi);
-        bmi_kategorie(bmi);
-
-        printf("\nNochmal berechnen? (j/n): ");
+        // Wiederholen?
+        printf("\nMoechtest du nochmal rechnen? (j/n): ");
         scanf(" %c", &nochmal);
 
-    } while(nochmal == 'j' || nochmal == 'J');
+    } while (nochmal == 'j' || nochmal == 'J');
 
-    printf("Programm beendet.\n");
+    printf("\nDanke, dass du den BMI-Rechner benutzt hast!\n");
     return 0;
 }
