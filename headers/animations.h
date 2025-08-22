@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <unistd.h>
+
+void progressbar()  {
+
+    printf("Calculating\x1b[36m [#    ]\x1b[0m");
+    sleep(1);
+    printf("\rCalculating\x1b[36m [##   ]\x1b[0m");
+    sleep(1);
+    printf("\rCalculating\x1b[36m [###  ]\x1b[0m");
+    sleep(1);
+    printf("\rCalculating\x1b[36m [#####]\x1b[0m");
+    sleep(1);
+    printf("\n");
+
+    }
+
+void loading_animation() {
+    const char *animation = "|/-\\";
+    for (int i = 0; i < 20; i++) {
+        printf("\rLoading... %c", animation[i % 4]);
+        fflush(stdout);
+        usleep(200000);
+    }
+    printf("\rLoading... Done!\n");
+}
+
+void ASCII_1() {
+    printf("\x1b[36m   _________        .__               .__          __                 ________ _______  _______  _______   \n");
+    printf("   \\_   ___ \\_____  |  |   ____  __ __|  | _____ _/  |_  ___________  \\_____  \\\\   _  \\ \\   _  \\ \\   _  \\  \n");
+    printf("   /    \\  \\/\\__  \\ |  | _/ ___\\|  |  \\  | \\__  \\\\   __\\/  _ \\_  __ \\   _(__  </  /_\\  \\/  /_\\  \\/  /_\\  \\ \n");
+    printf("   \\     \\____/ __ \\|  |_\\  \\___|  |  /  |__/ __ \\|  | (  <_> )  | \\/  /       \\  \\_/   \\  \\_/   \\  \\_/   \\\n");
+    printf("    \\______  (____  /____/\\___  |____/|____(____  /__|  \\____/|__|    /______  /\\_____  /\\_____  /\\_____  /  \n");
+    printf("           \\/     \\/          \\/                \\/                           \\/       \\/       \\/       \\/ \n\x1b[0m");
+}
