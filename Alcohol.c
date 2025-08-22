@@ -24,7 +24,7 @@ int main() {
     okay_garmin_video_speichern = calculate_bac(weight, sex, alcohol_grams);
 
     printf("------------------------------------\n");
-    printf("Estimated Blood alc: %.3f ‰\n", okay_garmin_video_speichern);
+    printf("\x1b[36mEstimated Blood alc: %.3f ‰\x1b[0m\n", okay_garmin_video_speichern);
     printf("====================================\n");
 
     return 0;
