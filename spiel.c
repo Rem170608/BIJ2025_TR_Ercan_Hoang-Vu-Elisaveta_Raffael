@@ -2,7 +2,7 @@
 // Created by bulga on 20.08.2025.
 //
 
-#include "headers/spiel.h"
+#include "./heraders/spiel.h"
 
 int main() {
     printf("Willkommen zu Scheren-Stein-Papier!\n");
