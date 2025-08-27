@@ -1,7 +1,7 @@
 //
 // Created by bulga on 21.08.2025.
 //
-#include "./bmi.h"
+#include "./heraders/bmi.h"
 
 int main() {
     char nochmal;
