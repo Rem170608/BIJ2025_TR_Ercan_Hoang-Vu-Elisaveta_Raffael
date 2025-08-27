@@ -2,6 +2,8 @@
 // Created by bulga on 20.08.2025.
 //
 
+#include "headers/mathefunktionen.h"
+
 // Addition
 double addd(int *numbers, int n) {
     double sum = 0;
@@ -23,7 +25,7 @@ double sub(int *numbers, int n) {
 double mul(int *numbers, int n) {
     double result = 1;
     for(int i = 0; i < n; i++)
-        result *= numbers[i];  // auch negative Zahlen möglich
+        result *= numbers[i];
     return result;
 }
 
@@ -32,10 +34,8 @@ double divi(int *numbers, int n) {
     if(n == 0) return 0;
     double result = numbers[0];
     for(int i = 1; i < n; i++) {
-        if(numbers[i] == 0) {
-            printf("Fehler: Division durch 0!\n");
-            return 0;
-        }
+        if(numbers[i] == 0)
+            return 0; // Fehler: Division durch 0
         result /= numbers[i];
     }
     return result;
@@ -55,7 +55,7 @@ double wurzel(double zahl) {
     return sqrt(zahl);
 }
 
-// Fakultät
+// Fakultät (nur für nicht-negative ganze Zahlen)
 unsigned long long fakultaet(int n) {
     if(n < 0) {
         printf("Fehler: Fakultät einer negativen Zahl!\n");
