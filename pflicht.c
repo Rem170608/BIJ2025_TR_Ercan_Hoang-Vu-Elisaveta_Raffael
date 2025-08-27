@@ -2,7 +2,7 @@
 // Created by bulga on 20.08.2025.
 //
 
-#include "mathefunktionen.h"
+#include "headers/mathefunktionen.h"
 
 // Addition
 double addd(int *numbers, int n) {
