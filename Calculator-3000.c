@@ -15,7 +15,7 @@ int main() {
     printf("Version \x1b[36m2.4.0\x1b[0m\n");
     printf("Welcome to\n");
     ASCII_1();
-    //printf("\tby Raffael\n");
+    printf("\tby Raffael\n");
     printf("\x1b[4mSupported Operations\x1b[0m:\n");
     printf("\x1b[31m+ = Addition\x1b[0m\n");
     printf("\x1b[33m- = Subtraction\x1b[0m\n");

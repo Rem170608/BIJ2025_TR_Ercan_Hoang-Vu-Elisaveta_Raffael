@@ -8,6 +8,7 @@
 
 int main() {
     ASCII_2();
+    printf("By Raffael\n");
 
     double weight, alcohol_grams, okay_garmin_video_speichern;
     char sex;
