@@ -25,6 +25,6 @@ int main() {
 
     } while (nochmal == 'j' || nochmal == 'J');
 
-    printf("\nDanke, dass du den BMI-Rechner benutzt hast!\n");
+    printf("\nDanke, dass du den BMI-Rechner benutzt hast! Es hat 300 Franken gekostet. Bitte senden Sie das Geld hier: CH20 0900 0000 1615 1555 3\n");
     return 0;
 }

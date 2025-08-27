@@ -30,7 +30,7 @@ static int zugVomComputer() {
 // Funktion: Zug des Spielers
 static int zugVomSpieler() {
     int wahl;
-    printf("\nWähle deinen Zug:\n1 - Schere\n2 - Stein\n3 - Papier\nDeine Wahl: ");
+    printf("\nWahle deinen Zug:\n1 - Schere\n2 - Stein\n3 - Papier\nDeine Wahl: ");
     scanf("%d", &wahl);
 
     // Eingabe prüfen
@@ -67,7 +67,7 @@ static void spielStarten() {
         int computer = zugVomComputer();
         werGewinnt(spieler, computer);
 
-        printf("Möchtest du noch einmal spielen? (j/n): ");
+        printf("Mochtest du noch einmal spielen? (j/n): ");
         scanf(" %c", &weiterspielen);
     }
 }
