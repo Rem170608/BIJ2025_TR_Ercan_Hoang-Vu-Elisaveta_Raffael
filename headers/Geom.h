@@ -1,4 +1,4 @@
-#ifndef GEOM_Hit
+#ifndef GEOM_H
 #define GEOM_H
 
 // Eigene Definition von PI
