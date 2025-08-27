@@ -19,6 +19,28 @@ int main() {
         i++;
     }
 
+    for (int i = 0; expr[i] != '\0'; i++) {
+        if (expr[i] == '/') {
+
+            int j = i + 1;
+            while (expr[j] == ' ' || expr[j] == '\t') j++;
+
+            if (expr[j] == '0') {
+                printf("Fehler: Division durch 0 an Position %d\n", i);
+                return 1;
+            }
+        }
+    }
+
+    for (int i = 0; expr[i] != '\0'; i++) {
+        char c = expr[i];
+        if (!(isdigit(c) || c == '.' || c == '+' || c == '-' ||
+              c == '*' || c == '/' || c == '(' || c == ')' ||
+              c == ' ' || c == '\t')) {
+            printf("Fehler: Buchstabe '%c' auf %d\n", c, i);
+            return 1;
+              }
+    }
     double result = eval(expr);
     printf("Ergebnis: %lf\n", result);
 
