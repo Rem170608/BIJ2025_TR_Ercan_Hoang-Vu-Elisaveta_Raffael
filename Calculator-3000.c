@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <math.h>
 #include "./headers/calc-f.h"
 #include "./headers/animations.h"
 
